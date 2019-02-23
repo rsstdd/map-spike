@@ -18,11 +18,3 @@ These instructions will get you a copy of the project up and running on your loc
 ## Built With
 
 - [Gatsby](https://gatsbyjs.org/) - React Static Site Generator
-
-## Other Ideas worth considering:
-
-### About
-
-- [Space10](https://space10.io/team/)
-- [Woodwork](https://woodwork.nl/about)
-- [JosephMark](https://www.josephmark.com.au/about/)
