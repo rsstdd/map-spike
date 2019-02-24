@@ -1,7 +1,14 @@
 module.exports = {
-  pathPrefix: '/gatsby-redux-starter',
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: `A few options`,
+    description: `Three options for the "about/company" section of a website`,
+    author: `Ross Todd rssmtdd@gmail.com`,
+    menuLinks: [
+      {
+        name: '1',
+        link: '/',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,10 +20,9 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-sass`,
       precision: 8, // For Bootstrap
     },
   ],
-};
+}

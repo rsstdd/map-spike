@@ -1,43 +1,52 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
-import { Link } from 'gatsby';
-import Navbar from 'react-bootstrap/lib/Navbar';
-import Nav from 'react-bootstrap/lib/Nav';
+import './header.module.scss'
 
-import headerStyles from './header.module.scss';
+const Header = ({ siteTitle, menuLinks }) => {
+  let stylesStr
 
-const Header = () => {
+  if (process.env.NODE_ENV === `production`) {
+    try {
+      stylesStr = require(`!raw-loader!../public/styles.css`)
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.log(e)
+    }
+  }
+
+  let css
+  if (process.env.NODE_ENV === `production`) {
+    css = (
+      <style
+        id="gatsby-inlined-css"
+        dangerouslySetInnerHTML={{ __html: stylesStr }}
+      />
+    )
+  }
   return (
-    <header className={`header header-top-transparent ${headerStyles.header}`}>
-      <Navbar className="navbar navbar-light navbar-expand-lg navbar-static-top sticky-header">
-        <Navbar.Header>
-          <Navbar.Brand className="navbar-header">
-            <a className="navbar-brand" href="https://www.gatsbyjs.org/">
-              <img src="/gatsby-redux-starter/icons/gatsbyJS.png" alt="logo" className="logo-default" />
-            </a>
-          </Navbar.Brand>
-          <Nav className="navbar-nav ml-auto">
-            <a className="dropdown nav-item nav-link" key="1" href="https://github.com/AVivero/gatsby-redux-starter">
-              <img className="navbar-icon github-icon" src="/gatsby-redux-starter/icons/github.png" alt="GitHub" />
-            </a>
-            <a className="dropdown nav-item nav-link" key="2" href="mailto:alexviveropelaez@gmail.com">
-              <i className="navbar-icon material-icons">
-                email
-              </i>
-            </a>
-          </Nav>
-        </Navbar.Header>
-      </Navbar>
+    <header className="nav">
+      {css}
+      <div className="nav-list">
+        <h1>{siteTitle}</h1>
+        {menuLinks.map(item => (
+          <Link key={item.link} to={item.link} className="nav-list-item">
+            {item.name}
+          </Link>
+        ))}
+      </div>
     </header>
-  );
-};
+  )
+}
 
 Header.propTypes = {
+  siteTitle: PropTypes.string,
+  menuLinks: PropTypes.array,
+}
 
-};
 Header.defaultProps = {
+  siteTitle: `Can I Has Maps?`,
+}
 
-};
-
-export default Header;
+export default Header

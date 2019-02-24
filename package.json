@@ -2,7 +2,7 @@
   "name": "gatsby-redux-starter",
   "description": "Gatsby's redux starter - Based in Gatsby's default starter",
   "version": "1.0.0",
-  "author": "Alex Vivero",
+  "author": "Ross Todd",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
@@ -11,6 +11,9 @@
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-plugin-sharp": "^2.0.22",
+    "gatsby-source-filesystem": "^2.0.22",
+    "gatsby-transformer-sharp": "^2.1.14",
     "lodash": "^4.17.11",
     "material-icons": "^0.2.3",
     "node-sass": "^4.9.3",
