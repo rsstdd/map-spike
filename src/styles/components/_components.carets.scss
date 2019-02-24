@@ -1,0 +1,24 @@
+// File Name: _components.caret.scss
+// Description: Styles for Up and Down Carets
+// ------------------------------------------------------------
+$arrow-size: 8px;
+$arrow-color: #333;
+
+[class^='caret'] {
+  border-style: solid;
+  display: inline-block;
+  height: 0;
+  margin-left: 5px;
+  padding: 0 0 5px;
+  width: 0;
+}
+
+.caret-up {
+  border-color: transparent transparent $arrow-color;
+  border-width: 0 0 $arrow-size $arrow-size;
+}
+
+.caret-down {
+  border-color: $arrow-color transparent transparent;
+  border-width: $arrow-size $arrow-size 0;
+}

@@ -31,9 +31,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header />
-        <div className="mainWrapper">
-          {children}
-        </div>
+        <div className="mainWrapper">{children}</div>
         <Footer />
       </>
     )}

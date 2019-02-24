@@ -1,0 +1,25 @@
+// Bold
+.u-fw-2 {
+  font-weight: 200;
+}
+
+.u-fw-7 {
+  font-weight: 700;
+}
+
+.u-bottom {
+  // position: absolute;
+  // bottom: 0;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+
+.box-shadow-1 {
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,.15);
+}
+
+.box-shadow-2 {
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
+}

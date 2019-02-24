@@ -1,0 +1,63 @@
+// ****************
+// FAQs component
+// *****************
+.faqs-wrapper {
+  background-color: $m-orange;
+}
+
+.faqs {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px;
+}
+
+// Toggle Hide/Show
+.faqs .display {
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.hide {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: visibility 0s, opacity .5s linear;
+}
+
+// Responsive
+@include respond(phone) {
+  .faqs-wrapper {
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 5rem;
+  }
+
+  .faqs {
+    padding: 10% 5%;
+    width: 100%;
+  }
+}
+
+
+@include respond(tab-port) {
+  .faqs-wrapper {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 7rem;
+  }
+}
+
+@include respond(tab-land) {
+  .faqs-wrapper {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 7rem;
+  }
+}
+
+@include respond(big-desktop) {
+  .faqs-wrapper {
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 5rem;
+  }
+}

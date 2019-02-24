@@ -1,0 +1,68 @@
+.employee-wrapper {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.employee-2 {
+  align-items: stretch;
+  background-color: rgba($color-white, .6);
+  box-shadow: 0 3rem 6rem rgba($color-black, .1);
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: row wrap;
+  margin: 3rem 4rem 0 3rem;
+  max-width: 500px;
+  min-height: 100px;
+  min-width: 450px;
+  padding: 0;
+  transform: skewX(-12deg);
+  width: calc((100% - 200px) / 4);
+}
+
+.employee-image-wrapper {
+  -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  transform: translateX(-4rem) skewX(12deg);
+  width: 100%;
+}
+
+.employee-image {
+  backface-visibility: hidden;
+  height: 100%;
+  transition: all .5s;
+}
+
+.employee-image:hover {
+  transform: scale(1);
+}
+
+.employee-text-wrapper {
+  bottom: 5rem;
+  position: absolute;
+  right: 3.5rem;
+  text-align: right;
+  transform: skewX(12deg);
+}
+
+.employee-caption {
+  backface-visibility: hidden;
+  color: $m-blue;
+  font-size: 1.7rem;
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transition: all .5s;
+}
+
+.employee-caption:hover {
+  opacity: 1;
+}

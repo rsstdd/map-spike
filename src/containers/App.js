@@ -8,9 +8,7 @@ import Layout from './Layout';
 
 const App = ({ children }) => (
   <Provider store={store}>
-    <Layout>
-      { children }
-    </Layout>
+    <Layout>{children}</Layout>
   </Provider>
 );
 

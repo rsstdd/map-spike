@@ -1,0 +1,69 @@
+body {
+  color: color-grey-dark-3;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.name-heading {
+  color: $color-grey-dark-3;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.name-heading-span {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  // padding: 1rem;
+}
+
+.span-shadow {
+  padding: .5rem 1.2rem;
+}
+
+.title {
+  font-weight: 200;
+  text-align: right;
+}
+
+.cards-caption {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.connect-with {
+  letter-spacing: .1rem;
+  line-height: 2.2rem;
+}
+
+
+.underline > a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+}
+
+.underline > a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $m-green;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+
+.underline > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
