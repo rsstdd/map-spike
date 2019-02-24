@@ -1,28 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 
-import footerStyles from './footer.module.scss';
+import footerStyles from './footer.module.scss'
 
 const Footer = () => (
   <footer className={`footer ${footerStyles.footer}`}>
     <div className="container">
       <div className="row">
         <div className="col-lg-12 col-md-12">
-          <p>Copyright © Your Website 2018</p>
-          <p className="footer-gatsby">Proudly published with Gatsby</p>
+          <p className="footer-gatsby" />
         </div>
       </div>
     </div>
   </footer>
-);
+)
 
-Footer.propTypes = {
+Footer.propTypes = {}
+Footer.defaultProps = {}
 
-};
-Footer.defaultProps = {
-
-};
-
-export default Footer;
+export default Footer

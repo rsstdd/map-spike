@@ -14,13 +14,7 @@
 @import 'utilities/all';
 @import 'layout/all';
 
-// ITCSS: COMPONENTS:
-// Styles unique to components
-@import 'components/all';
-
-// ITCSS: CONTAINERS:
-// Files that hold many components
-@import 'containers/all';
+// ITCSS: COMPONENTS & CONTAINERS styles in components/* and pagesDefinition/*:
 
 // ITCSS: TRUMPS
 // Use sparingly. These are meant to override

@@ -1,12 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import App from '../../containers/App';
-import TestComponent from '../../components/TestComponent/TestComponent';
+import App from '../../containers/App'
 
-const IndexPage = () => (
-  <App>
-    <TestComponent />
-  </App>
-);
+const IndexPage = () => <App />
 
-export default IndexPage;
+export default IndexPage
