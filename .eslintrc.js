@@ -1,6 +1,6 @@
-const ERROR = 'ERROR';
-const WARN = 'WARN';
-const OFF = 'OFF';
+const ERROR = 'ERROR'
+const WARN = 'WARN'
+const OFF = 'OFF'
 // eslint in javascript format so that we can have comments
 module.exports = {
   plugins: ['react'],
@@ -18,7 +18,12 @@ module.exports = {
     mocha: true,
     jest: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier', 'prettier/react'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'prettier',
+    'prettier/react',
+  ],
   rules: {
     // Possible Errors (overrides from recommended set)
     'no-unexpected-multiline': ERROR,
@@ -211,7 +216,7 @@ module.exports = {
     'space-before-function-paren': [WARN, 'never'],
     'space-in-parens': [WARN, 'never'],
     'space-infix-ops': [
-      WARN,
+      OFF,
       {
         int32Hint: true,
       },
@@ -219,4 +224,4 @@ module.exports = {
     'space-unary-ops': ERROR,
     'spaced-comment': [WARN, 'always'],
   },
-};
+}

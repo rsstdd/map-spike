@@ -26,7 +26,7 @@ const Header = ({ siteTitle, menuLinks }) => {
     )
   }
   return (
-    <header className="nav">
+    <header className="nav u-box-shadow-2">
       {css}
       <div className="nav-list">
         <h1>{siteTitle}</h1>

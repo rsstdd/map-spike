@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
 
-import footerStyles from './footer.module.scss'
+import pbStyle from './provider-bar.module.scss'
 
-const Footer = () => (
-  <footer className={`footer ${footerStyles.footer}`}>
+const ProviderBar = () => (
+  <footer className={`${pbStyle.providerBar}`}>
     <div className="container">
       <div className="row">
         <div className="col-lg-12 col-md-12">
@@ -17,7 +17,7 @@ const Footer = () => (
   </footer>
 )
 
-Footer.propTypes = {}
-Footer.defaultProps = {}
+ProviderBar.propTypes = {}
+ProviderBar.defaultProps = {}
 
-export default Footer
+export default ProviderBar
