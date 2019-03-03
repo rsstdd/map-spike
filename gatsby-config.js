@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Map Thing`,
+    title: `Spike`,
     description: ``,
     author: `Ross Todd rssmtdd@gmail.com`,
     menuLinks: [

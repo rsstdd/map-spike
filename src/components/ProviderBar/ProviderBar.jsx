@@ -10,7 +10,7 @@ const ProviderBar = () => (
     <div className="container">
       <div className="row">
         <div className="col-lg-12 col-md-12">
-          <p className="footer-gatsby" />
+          <p className="footer" />
         </div>
       </div>
     </div>

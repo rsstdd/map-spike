@@ -20,6 +20,9 @@
 }
 
 .u-box-shadow-2 {
-  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
+  -webkit-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
+  -moz-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
+  -ms-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
+  -o-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
 }

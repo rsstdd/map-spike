@@ -1,7 +1,6 @@
 .nav {
-  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
   background: #fff;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
+  height: 62px;
 }
 
 .nav-list {
@@ -16,4 +15,22 @@
 
 .nav-list-item {
   margin: 1rem;
+}
+
+.nav::after {
+  background-image: linear-gradient(to bottom, rgba(0, 55, 87, .12), rgba(0, 55, 87, 0));
+  content: '';
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 62px;
+  width: 100%;
+}
+
+.box {
+  background: #fff;
+  border: solid 2px #e2e6ec;
+  border-radius: 2px;
+  padding: 2rem;
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import App from '../../containers/App'
 import Seo from '../../components/Seo/Seo'
-import Map from '../../components/MapWrapper/MapWrapper'
+import Map from '../../components/MapWrapper'
 // import MapErrorBoundary from '../../components/MapErrorBoundary/MapErrorBoundary'
 
-import getProviderInformation from './lib'
+import getProviderInformation from './lib/index'
 
 class IndexPage extends Component {
   state = {
