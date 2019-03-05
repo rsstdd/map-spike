@@ -1,47 +1,48 @@
-import React, { Component } from 'react';
-import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import React, { Component } from 'react'
+import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react'
 
-import CurrentLocation from '../Map';
+import CurrentLocation from '../Map'
+import MapMarkerInfoGroup from '../MapMarkerInfoGroup'
 
-export class MapContainer extends Component {
+class MapContainer extends Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {}
-  };
+    selectedPlace: {},
+  }
 
   onMarkerClick = (props, marker, e) => {
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
-      showingInfoWindow: true
-    });
+      showingInfoWindow: true,
+    })
   }
 
   onClose = props => {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
-        activeMarker: null
-      });
+        activeMarker: null,
+      })
     }
-  };
+  }
 
   render() {
+    const { providerResponse } = this.props
+
     return (
       <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
-        <Marker onClick={this.onMarkerClick} name={'current location'} />
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
+        {/* <MapMarkerInfoGroup
+          onMarkerClick={this.onMarkerClick}
+          activeMarker={this.state.activeMarker}
+          showingInfoWindow={this.state.showingInfoWindow}
           onClose={this.onClose}
-        >
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-          </div>
-        </InfoWindow>
+          selectedPlace={this.state.selectedPlace}
+          providerResponse={providerResponse}
+        /> */}
       </CurrentLocation>
-    );
+    )
   }
 }
 

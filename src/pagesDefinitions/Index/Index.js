@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import App from '../../containers/App'
 import Seo from '../../components/Seo/Seo'
 import Map from '../../components/MapWrapper'
-// import MapErrorBoundary from '../../components/MapErrorBoundary/MapErrorBoundary'
+import MapErrorBoundary from '../../components/MapErrorBoundary/MapErrorBoundary'
 
 import getProviderInformation from './lib/index'
 
@@ -12,19 +12,18 @@ class IndexPage extends Component {
   }
 
   async componentDidMount() {
-    const data = await getProviderInformation()
-    this.setState({ providerResponse: data })
+    const providerResponse = await getProviderInformation()
+    this.setState({ providerResponse: providerResponse })
   }
 
   render() {
     const { providerResponse } = this.state
-
-    console.log(providerResponse, 'providerResponse')
-
     return (
       <App>
+        {/* <MapErrorBoundary> */}
         <Seo title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Map providerResponse={providerResponse} />
+        {/* </MapErrorBoundary> */}
       </App>
     )
   }
